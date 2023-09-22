@@ -9,7 +9,7 @@ def give_bmi(height: list[int | float],
     '''
     try:
         if (len(height) == 0 or len(weight) == 0):
-            raise Exception ("Empty list")
+            raise Exception("Empty list")
         if (len(height) != len(weight)):
             raise Exception("List of height and weight must be same size")
         types = (int, float)
