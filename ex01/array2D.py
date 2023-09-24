@@ -19,6 +19,7 @@ def error_handling(family: list, start: int, end: int) -> list:
 		exit()
 
 def slice_me(family: list, start: int, end: int) -> list:
+	'''Using the slicing method'''
 	error_handling(family, start, end)
 	np_family = np.array(family)
 	print("My shape is : ", end='')
