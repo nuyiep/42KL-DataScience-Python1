@@ -18,6 +18,7 @@ def ft_rotate(np_zoomed_image_array: np.array):
 		for y in range(height):
 			rotated_data[x, y, :] = np_zoomed_image_array[y, x, :] 
 			#swap x and y coordinates= transpose
+			#element-wise assignment operation- copy the pixel values
 	print("New shape after Transpose:", end='')
 	print(np.shape(rotated_data))
 	print(rotated_data)
