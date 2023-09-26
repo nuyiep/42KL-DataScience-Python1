@@ -13,7 +13,9 @@ def ft_load(path: str) -> np.array:
 		image = Image.open(path)
 		# image.show()
 		image_format = image.format
+		print("Image Format: ", image_format)
 		np_image = np.array(image)
+		print("The shape of image is:", np_image.shape)
 		return (np_image)
 	except Exception as e:
 		print(f"{e}")

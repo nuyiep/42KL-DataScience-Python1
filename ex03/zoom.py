@@ -18,7 +18,7 @@ def ft_zoom(np_image_array: np.array, image: str):
 
 def main():
 	'''Main'''
-	image = "animal.jpeg"
+	image = "../animal.jpeg"
 	np_image_array = ft_load(image)
 	ft_zoom(np_image_array, image)
 	
