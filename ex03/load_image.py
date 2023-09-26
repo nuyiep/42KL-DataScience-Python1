@@ -11,7 +11,7 @@ def ft_load(path: str) -> np.array:
 	'''
 	try:
 		image = Image.open(path)
-		image.show()
+		# image.show()
 		image_format = image.format
 		print("Image Format: ", image_format)
 		np_image = np.array(image)
