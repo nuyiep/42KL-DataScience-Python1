@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # https://www.youtube.com/watch?v=a44PP4koKHY&ab_channel=CodeBear
 def ft_invert(array) -> np.array:
-    '''Invert using -'''
+    '''Invert using - method'''
     inverted_array = [255, 255, 255] - array
     plt.imshow(inverted_array)
     plt.title("Inverted")
@@ -51,19 +51,17 @@ def ft_blue(array) -> np.array:
 
 def ft_grey(array) -> np.array:
     '''Grey using =, /'''
-    grey_intensity_array = np.mean(array, axis=2, dtype="i")  # axis2=color channel
-    print(array)
-    print(grey_intensity_array)
+    grey_intensity_array = np.mean(array, axis=2, dtype="i")
+    # axis2=color channel | data type is 32-bit signed integer
     grey_array = np.zeros_like(array)
-    print(grey_array)
-    grey_intensity_array = grey_intensity_array.reshape(grey_intensity_array.shape[0], grey_intensity_array.shape[1], 1)
-    print(grey_intensity_array.shape)
-    print(grey_array.shape)
-    grey_array[:, :, :] = grey_intensity_array
-    print(grey_array)
-    # assigning grey intensity to Red channel 
-    # grey_array[:, :, 1] = grey_intensity_array
-    # grey_array[:, :, 2] = grey_intensity_array
+    # assigning grey intensity to Red channel
+    grey_array[:, :, 0] = grey_intensity_array
+    grey_array[:, :, 1] = grey_intensity_array
+    grey_array[:, :, 2] = grey_intensity_array
+    # or
+    # grey_intensity_array = grey_intensity_array.reshape(
+    #         grey_intensity_array.shape[0], grey_intensity_array.shape[1], 1)
+    # grey_array[:, :, :] = grey_intensity_array
 
     plt.imshow(grey_array)
     plt.title("grey")
